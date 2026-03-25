@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProfileHeader from '../components/ProfileHeader.astro';
+import LinkPill from '../components/LinkPill.astro';
+import SocialGroup from '../components/SocialGroup.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Esther Crafts - Portal Oficial ✨">
+	<ProfileHeader />
+
+	<nav class="w-full flex flex-col gap-[12px]">
+		<LinkPill
+			href="https://esthercrafts.com"
+			iconClass="fas fa-satellite-dish"
+			text="Explorar Sitio Web"
+			variant="pill-web"
+			showArrow={true}
+		/>
+
+		<SocialGroup>
+			<LinkPill
+				href="https://instagram.com/esther_crafts"
+				iconClass="fas fa-palette"
+				text="Esther Crafts"
+				variant="pill-insta-crafts"
+			/>
+			<LinkPill
+				href="https://instagram.com/esthershopbyec"
+				iconClass="fas fa-shopping-cart"
+				text="Esther Shop"
+				variant="pill-insta-shop"
+			/>
+			<LinkPill
+				href="https://instagram.com/floresbyesther"
+				iconClass="fas fa-seedling"
+				text="Flores by Esther"
+				variant="pill-insta-flores"
+			/>
+		</SocialGroup>
+
+		<LinkPill
+			href="https://wa.me/18492010608?text=Hola%20Esther%20%E2%9C%A8%20vengo%20desde%20tu%20portal%20QR"
+			iconClass="fab fa-whatsapp"
+			text="Chat Directo WhatsApp"
+			variant="pill-whatsapp"
+		/>
+	</nav>
+
+	<footer class="mt-[25px] text-[0.65rem] text-text-muted opacity-60 tracking-[2px] uppercase flex items-center gap-[5px]">
+		<span class="font-bold text-neon-pink">&lt;/&gt;</span> by MYTEC
+	</footer>
+</Layout>

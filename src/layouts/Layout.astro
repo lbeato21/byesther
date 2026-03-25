@@ -1,0 +1,36 @@
+---
+import BackgroundOrbs from '../components/BackgroundOrbs.astro';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		<!-- FontAwesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+		<!-- Google Fonts: Poppins -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="font-sans text-text-main bg-base-pink min-h-screen flex justify-center items-center p-[15px] relative overflow-hidden">
+		<BackgroundOrbs />
+
+		<div class="main-glass-card-border w-full max-w-[420px] bg-glass-card-bg backdrop-blur-[25px] border border-glass-border rounded-[30px] p-[30px_20px] shadow-[0_15px_35px_rgba(0,0,0,0.05)] flex flex-col items-center relative z-10">
+			<slot />
+		</div>
+	</body>
+</html>
