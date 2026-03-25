@@ -1,0 +1,20 @@
+---
+interface Props {
+  href: string;
+  iconClass: string;
+  text: string;
+  variant: string;
+  showArrow?: boolean;
+}
+
+const { href, iconClass, text, variant, showArrow = false } = Astro.props;
+---
+<a
+  href={href}
+  target="_blank"
+  class={`flex items-center py-[16px] px-[20px] bg-glass-pill-bg border border-glass-border rounded-[50px] no-underline text-text-main text-[0.95rem] font-medium transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] relative overflow-hidden active:scale-[0.96] active:translate-y-[1px] ${variant}`}
+>
+  <i class={`${iconClass} text-[1.1rem] w-[25px] mr-[12px] text-center transition-transform duration-300 ease`}></i>
+  <span>{text}</span>
+  {showArrow && <i class="fas fa-chevron-right ml-auto text-[0.8rem] opacity-50"></i>}
+</a>

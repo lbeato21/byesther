@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@theme {
+  /* Paleta Esther Crafts Modernizada para Contraste Neón */
+  --color-base-pink: #fff5f7;
+  --color-base-mint: #f0fff4;
+  --color-text-main: #2d3436;
+  --color-text-muted: #636e72;
+
+  /* Colores Neón para Resplandores (Glow) */
+  --color-neon-pink: #ff758f;
+  --color-neon-mint: #26ffe6;
+  --color-neon-purple: #a29bfe;
+  --color-neon-whatsapp: #2ed573;
+
+  /* Glassmorphism Profundo */
+  --color-glass-card-bg: rgba(255, 255, 255, 0.15);
+  --color-glass-pill-bg: rgba(255, 255, 255, 0.25);
+  --color-glass-border: rgba(255, 255, 255, 0.4);
+
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --animate-orbMovement: orbMovement 20s infinite alternate ease-in-out;
+}
+
+@keyframes orbMovement {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, 50px) scale(1.1); }
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  /* Efecto de borde neón sutil en la tarjeta principal */
+  .main-glass-card-border::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 30px;
+      padding: 1px;
+      background: linear-gradient(135deg, var(--color-neon-pink), transparent, var(--color-neon-mint));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.5;
+  }
+
+  /* Colores y Glows específicos al presionar */
+
+  /* Web */
+  .pill-web:active {
+      background: rgba(255, 117, 143, 0.1);
+      border-color: var(--color-neon-pink);
+      box-shadow: 0 0 15px rgba(255, 117, 143, 0.4);
+      color: #ff5274;
+  }
+  .pill-web:active i { color: var(--color-neon-pink); }
+
+  /* Grupo Instagram */
+  .pill-insta-crafts:active, .pill-insta-shop:active, .pill-insta-flores:active {
+      background: rgba(162, 155, 254, 0.1);
+      border-color: var(--color-neon-purple);
+      box-shadow: 0 0 15px rgba(162, 155, 254, 0.4);
+      color: #6c5ce7;
+  }
+  .pill-insta-crafts:active i, .pill-insta-shop:active i, .pill-insta-flores:active i { color: var(--color-neon-purple); }
+
+  /* WhatsApp */
+  .pill-whatsapp:active {
+      background: rgba(46, 213, 115, 0.1);
+      border-color: var(--color-neon-whatsapp);
+      box-shadow: 0 0 15px rgba(46, 213, 115, 0.4);
+      color: #26af5f;
+  }
+  .pill-whatsapp:active i { color: var(--color-neon-whatsapp); }
+}
