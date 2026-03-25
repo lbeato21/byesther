@@ -26,10 +26,10 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body class="font-sans text-text-main bg-base-pink min-h-screen flex justify-center items-center p-[15px] relative overflow-hidden">
+	<body class="font-sans text-text-main bg-base-pink min-h-[100dvh] flex flex-col justify-center items-center p-[15px] relative overflow-x-hidden antialiased">
 		<BackgroundOrbs />
 
-		<div class="main-glass-card-border w-full max-w-[420px] bg-glass-card-bg backdrop-blur-[25px] border border-glass-border rounded-[30px] p-[30px_20px] shadow-[0_15px_35px_rgba(0,0,0,0.05)] flex flex-col items-center relative z-10">
+		<div class="main-glass-card-border w-full max-w-[420px] m-auto bg-glass-card-bg backdrop-blur-[25px] border border-glass-border rounded-[30px] p-[30px_20px] shadow-[0_15px_35px_rgba(0,0,0,0.05)] flex flex-col items-center relative z-10">
 			<slot />
 		</div>
 	</body>
