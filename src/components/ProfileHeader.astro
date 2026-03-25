@@ -1,10 +1,16 @@
 ---
+import { Image } from 'astro:assets';
+import logoImg from '../assets/logo.png';
 ---
 <header class="text-center mb-[25px]">
-  <div class="w-[80px] h-[80px] bg-white rounded-full flex justify-center items-center mx-auto mb-[15px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] border-2 border-white">
-    <img
-      src="https://esthercrafts.com/wp-content/uploads/2026/02/Designer-1.png"
+  <div class="w-[80px] h-[80px] bg-white rounded-full flex justify-center items-center mx-auto mb-[15px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] border-2 border-white overflow-hidden">
+    <Image
+      src={logoImg}
       alt="Esther Crafts Logo"
+      width={40}
+      height={40}
+      loading="eager"
+      fetchpriority="high"
       class="w-[40px] h-[40px] object-contain"
     />
   </div>

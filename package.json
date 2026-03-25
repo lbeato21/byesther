@@ -12,6 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.2.7",
+    "@fortawesome/fontawesome-free": "^7.2.0",
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.0.8",
     "tailwindcss": "^4.2.2"

@@ -1,0 +1,16 @@
+
+> temp-astro@0.0.1 dev
+> astro dev
+
+[vite] connected.
+21:34:36 [types] Generated 1ms
+21:34:36 [WARN] [content] Content config not loaded
+ astro  v6.0.8 ready in 2822 ms
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+21:34:36 watching for file changes...
+21:34:57 [200] / 101ms
+21:34:58 [200] /_image 197ms
+21:34:58 [vite] ✨ new dependencies optimized: astro/runtime/client/dev-toolbar/entrypoint.js
+21:34:58 [vite] ✨ optimized dependencies changed. reloading
+21:34:58 [200] / 8ms

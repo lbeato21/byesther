@@ -10,3 +10,41 @@
 ┃ Network  use --host to expose
 20:12:46 watching for file changes...
 20:12:49 [200] / 51ms
+21:28:18 [watch] /src/styles/global.css
+21:28:49 Configuration file updated. Restarting...
+[vite] program reload
+[vite] An error happened during full reload
+Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?
+Error: Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?
+    at loadAndTransform (file:///app/node_modules/vite/dist/node/chunks/config.js:22663:33)
+[vite] An error happened during full reload
+transport was disconnected, cannot call "fetchModule"
+Error: transport was disconnected, cannot call "fetchModule"
+    at reviveInvokeError (file:///app/node_modules/vite/dist/node/module-runner.js:475:14)
+    at Object.invoke (file:///app/node_modules/vite/dist/node/module-runner.js:549:11)
+    at async ModuleRunner.getModuleInformation (file:///app/node_modules/vite/dist/node/module-runner.js:1086:7)
+    at async request (file:///app/node_modules/vite/dist/node/module-runner.js:1103:83)
+    at async eval (/app/src/pages/index.astro:8:31)
+    at async ESModulesEvaluator.runInlinedModule (file:///app/node_modules/vite/dist/node/module-runner.js:913:3)
+    at async ModuleRunner.directRequest (file:///app/node_modules/vite/dist/node/module-runner.js:1146:59)
+    at async ModuleRunner.cachedRequest (file:///app/node_modules/vite/dist/node/module-runner.js:1053:73)
+    at async ModuleRunner.import (file:///app/node_modules/vite/dist/node/module-runner.js:1014:10)
+    at async file:///app/node_modules/vite/dist/node/module-runner.js:682:6
+[vite] connected.
+21:28:53 [vite] Re-optimizing dependencies because lockfile has changed
+21:28:53 [types] Generated 363ms
+21:28:53 [vite] Re-optimizing dependencies because vite config has changed
+21:31:21 [200] / 152ms
+21:31:21 [200] /_image 286ms
+21:31:21 [vite] ✨ new dependencies optimized: astro/runtime/client/dev-toolbar/entrypoint.js
+21:31:21 [vite] ✨ optimized dependencies changed. reloading
+21:32:58 Configuration file updated. Restarting...
+[vite] program reload
+[vite] An error happened during full reload
+Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?
+Error: Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?
+    at loadAndTransform (file:///app/node_modules/vite/dist/node/chunks/config.js:22663:33)
+[vite] connected.
+21:33:05 [vite] Re-optimizing dependencies because lockfile has changed
+21:33:05 [types] Generated 465ms
+21:33:05 [vite] Port 4321 is in use, trying another one...
