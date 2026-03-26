@@ -14,3 +14,11 @@
 21:34:58 [vite] ✨ new dependencies optimized: astro/runtime/client/dev-toolbar/entrypoint.js
 21:34:58 [vite] ✨ optimized dependencies changed. reloading
 21:34:58 [200] / 8ms
+[vite] program reload
+[vite] An error happened during full reload
+Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?
+Error: Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?
+    at loadAndTransform (file:///app/node_modules/vite/dist/node/chunks/config.js:22663:33)
+[vite] program reload
+[vite] program reload
+12:27:02 [watch] /src/styles/global.css
