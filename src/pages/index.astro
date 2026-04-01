@@ -4,6 +4,33 @@ import ProfileHeader from '../components/ProfileHeader.astro';
 import LinkPill from '../components/LinkPill.astro';
 import SocialGroup from '../components/SocialGroup.astro';
 
+interface SocialLink {
+	href: string;
+	iconClass: string;
+	text: string;
+	variant: string;
+}
+
+const socialLinks: SocialLink[] = [
+	{
+		href: 'https://instagram.com/esther_crafts',
+		iconClass: 'fas fa-palette',
+		text: 'Esther Crafts',
+		variant: 'pill-insta-crafts',
+	},
+	{
+		href: 'https://instagram.com/esthershopbyec',
+		iconClass: 'fas fa-shopping-cart',
+		text: 'Esther Shop',
+		variant: 'pill-insta-shop',
+	},
+	{
+		href: 'https://instagram.com/floresbyesther',
+		iconClass: 'fas fa-seedling',
+		text: 'Flores by Esther',
+		variant: 'pill-insta-flores',
+	},
+];
 ---
 
 <Layout title="Esther Crafts - Portal Oficial ✨">
@@ -19,24 +46,16 @@ import SocialGroup from '../components/SocialGroup.astro';
 		/>
 
 		<SocialGroup>
-			<LinkPill
-				href="https://instagram.com/esther_crafts"
-				iconClass="fas fa-palette"
-				text="Esther Crafts"
-				variant="pill-insta-crafts"
-			/>
-			<LinkPill
-				href="https://instagram.com/esthershopbyec"
-				iconClass="fas fa-shopping-cart"
-				text="Esther Shop"
-				variant="pill-insta-shop"
-			/>
-			<LinkPill
-				href="https://instagram.com/floresbyesther"
-				iconClass="fas fa-seedling"
-				text="Flores by Esther"
-				variant="pill-insta-flores"
-			/>
+			{
+				socialLinks.map((link) => (
+					<LinkPill
+						href={link.href}
+						iconClass={link.iconClass}
+						text={link.text}
+						variant={link.variant}
+					/>
+				))
+			}
 		</SocialGroup>
 
 		<LinkPill
