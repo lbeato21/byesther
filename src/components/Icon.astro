@@ -1,0 +1,25 @@
+---
+import { Icon as AstroIcon } from 'astro-icon/components';
+
+interface Props {
+  icon: string;
+  class?: string;
+}
+
+const { icon, class: className } = Astro.props;
+
+// Map FontAwesome classes to Iconify names used by astro-icon
+const iconMap: Record<string, string> = {
+  'fas fa-satellite-dish': 'fa6-solid:satellite-dish',
+  'fas fa-palette': 'fa6-solid:palette',
+  'fas fa-shopping-cart': 'fa6-solid:cart-shopping',
+  'fas fa-seedling': 'fa6-solid:seedling',
+  'fab fa-whatsapp': 'fa6-brands:whatsapp',
+  'fab fa-instagram': 'fa6-brands:instagram',
+  'fas fa-chevron-right': 'fa6-solid:chevron-right',
+};
+
+const iconName = iconMap[icon] || icon;
+---
+
+<AstroIcon name={iconName} class={className} />

@@ -1,4 +1,6 @@
 ---
+import Icon from './Icon.astro';
+
 interface Props {
   href: string;
   iconClass: string;
@@ -15,7 +17,7 @@ const { href, iconClass, text, variant, showArrow = false } = Astro.props;
   rel="noopener noreferrer"
   class={`flex items-center py-[16px] px-[20px] bg-glass-pill-bg border border-glass-border rounded-[50px] no-underline text-text-main text-[0.95rem] font-medium transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] relative overflow-hidden active:scale-[0.96] active:translate-y-[1px] ${variant}`}
 >
-  <i class={`${iconClass} text-[1.1rem] w-[25px] mr-[12px] text-center transition-transform duration-300 ease`}></i>
+  <Icon icon={iconClass} class="w-[1.1rem] h-[1.1rem] mr-[12px] transition-transform duration-300 ease" />
   <span>{text}</span>
-  {showArrow && <i class="fas fa-chevron-right ml-auto text-[0.8rem] opacity-50"></i>}
+  {showArrow && <Icon icon="fas fa-chevron-right" class="w-[0.8rem] h-[0.8rem] ml-auto opacity-50" />}
 </a>
