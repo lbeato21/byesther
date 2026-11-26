@@ -7,6 +7,7 @@ import {
 	siteConfig,
 	primaryLink,
 	instagramLinks,
+	mapsLink,
 	whatsappLink,
 } from '../data/links';
 ---
@@ -23,6 +24,8 @@ import {
 		<SocialGroup title={siteConfig.instagramGroupTitle}>
 			{instagramLinks.map((link) => <LinkPill {...link} />)}
 		</SocialGroup>
+
+		<LinkPill {...mapsLink} />
 
 		<LinkPill {...whatsappLink} />
 	</nav>

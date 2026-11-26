@@ -10,6 +10,7 @@
   --color-neon-pink: #ff758f;
   --color-neon-mint: #26ffe6;
   --color-neon-purple: #a29bfe;
+  --color-neon-maps: #0ea5e9;
   --color-neon-whatsapp: #2ed573;
 
   /* Glassmorphism Profundo */
@@ -92,6 +93,23 @@
   .pill-insta-shop:hover svg,
   .pill-insta-shop:focus-visible svg,
   .pill-insta-shop:active svg { color: var(--color-neon-purple); }
+
+  /* Google Maps */
+  .pill-maps:hover,
+  .pill-maps:focus-visible,
+  .pill-maps:active {
+      background: rgba(14, 165, 233, 0.1);
+      border-color: var(--color-neon-maps);
+      box-shadow: 0 0 15px rgba(14, 165, 233, 0.4);
+      color: #0284c7;
+  }
+  .pill-maps:focus-visible {
+      outline: 2px solid var(--color-neon-maps);
+      outline-offset: 2px;
+  }
+  .pill-maps:hover svg,
+  .pill-maps:focus-visible svg,
+  .pill-maps:active svg { color: var(--color-neon-maps); }
 
   /* WhatsApp */
   .pill-whatsapp:hover,
