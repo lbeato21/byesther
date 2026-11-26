@@ -50,32 +50,69 @@
       opacity: 0.5;
   }
 
-  /* Colores y Glows específicos al presionar */
+  /* Colores y Glows específicos en hover, focus-visible y active */
 
   /* Web */
+  .pill-web:hover,
+  .pill-web:focus-visible,
   .pill-web:active {
       background: rgba(255, 117, 143, 0.1);
       border-color: var(--color-neon-pink);
       box-shadow: 0 0 15px rgba(255, 117, 143, 0.4);
       color: #ff5274;
   }
-  .pill-web:active i { color: var(--color-neon-pink); }
+  .pill-web:focus-visible {
+      outline: 2px solid var(--color-neon-pink);
+      outline-offset: 2px;
+  }
+  .pill-web:hover svg,
+  .pill-web:focus-visible svg,
+  .pill-web:active svg { color: var(--color-neon-pink); }
 
   /* Grupo Instagram */
-  .pill-insta-crafts:active, .pill-insta-shop:active, .pill-insta-flores:active {
+  .pill-insta-crafts:hover,
+  .pill-insta-crafts:focus-visible,
+  .pill-insta-crafts:active,
+  .pill-insta-shop:hover,
+  .pill-insta-shop:focus-visible,
+  .pill-insta-shop:active {
       background: rgba(162, 155, 254, 0.1);
       border-color: var(--color-neon-purple);
       box-shadow: 0 0 15px rgba(162, 155, 254, 0.4);
       color: #6c5ce7;
   }
-  .pill-insta-crafts:active i, .pill-insta-shop:active i, .pill-insta-flores:active i { color: var(--color-neon-purple); }
+  .pill-insta-crafts:focus-visible,
+  .pill-insta-shop:focus-visible {
+      outline: 2px solid var(--color-neon-purple);
+      outline-offset: 2px;
+  }
+  .pill-insta-crafts:hover svg,
+  .pill-insta-crafts:focus-visible svg,
+  .pill-insta-crafts:active svg,
+  .pill-insta-shop:hover svg,
+  .pill-insta-shop:focus-visible svg,
+  .pill-insta-shop:active svg { color: var(--color-neon-purple); }
 
   /* WhatsApp */
+  .pill-whatsapp:hover,
+  .pill-whatsapp:focus-visible,
   .pill-whatsapp:active {
       background: rgba(46, 213, 115, 0.1);
       border-color: var(--color-neon-whatsapp);
       box-shadow: 0 0 15px rgba(46, 213, 115, 0.4);
       color: #26af5f;
   }
-  .pill-whatsapp:active i { color: var(--color-neon-whatsapp); }
+  .pill-whatsapp:focus-visible {
+      outline: 2px solid var(--color-neon-whatsapp);
+      outline-offset: 2px;
+  }
+  .pill-whatsapp:hover svg,
+  .pill-whatsapp:focus-visible svg,
+  .pill-whatsapp:active svg { color: var(--color-neon-whatsapp); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-orbMovement {
+    animation: none;
+  }
 }

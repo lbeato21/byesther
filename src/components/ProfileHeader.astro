@@ -1,19 +1,31 @@
 ---
 import { Image } from 'astro:assets';
 import logoImg from '../assets/logo.png';
+import { siteConfig } from '../data/links';
+
+interface Props {
+  brandName?: string;
+  subtitle?: string;
+}
+
+const {
+  brandName = siteConfig.brandName,
+  subtitle = siteConfig.subtitle,
+} = Astro.props;
 ---
 <header class="text-center mb-[25px]">
   <div class="w-[80px] h-[80px] bg-white rounded-full flex justify-center items-center mx-auto mb-[15px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] border-2 border-white overflow-hidden">
     <Image
       src={logoImg}
-      alt="Esther Crafts Logo"
+      alt={`${brandName} Logo`}
       width={40}
       height={40}
+      densities={[1, 2, 3]}
       loading="eager"
       fetchpriority="high"
       class="w-[40px] h-[40px] object-contain"
     />
   </div>
-  <h1 class="text-[1.4rem] font-bold tracking-[-0.5px] text-text-main mb-[3px]">Esther Crafts</h1>
-  <p class="text-[0.8rem] text-text-muted font-normal tracking-[0.5px]">Artesanía Digital • Flores • Accesorios</p>
+  <h1 class="text-[1.4rem] font-bold tracking-[-0.5px] text-text-main mb-[3px]">{brandName}</h1>
+  <p class="text-[0.8rem] text-text-muted font-normal tracking-[0.5px]">{subtitle}</p>
 </header>

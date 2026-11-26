@@ -1,9 +1,16 @@
 ---
 import Icon from './Icon.astro';
+import { siteConfig } from '../data/links';
+
+interface Props {
+  title?: string;
+}
+
+const { title = siteConfig.instagramGroupTitle } = Astro.props;
 ---
 <div class="bg-black/2 rounded-[20px] p-[10px] my-[5px] flex flex-col gap-[12px]">
   <p class="text-[0.7rem] text-text-muted uppercase tracking-[1px] text-center mb-[8px] flex items-center justify-center gap-2 font-semibold">
-    Nuestras Marcas en Instagram <Icon icon="fab fa-instagram" class="w-[1rem] h-[1rem]" />
+    {title} <Icon icon="fab fa-instagram" class="w-[1rem] h-[1rem]" />
   </p>
   <slot />
 </div>
