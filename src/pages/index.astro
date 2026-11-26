@@ -3,70 +3,31 @@ import Layout from '../layouts/Layout.astro';
 import ProfileHeader from '../components/ProfileHeader.astro';
 import LinkPill from '../components/LinkPill.astro';
 import SocialGroup from '../components/SocialGroup.astro';
-
-interface SocialLink {
-	href: string;
-	iconClass: string;
-	text: string;
-	variant: string;
-}
-
-const socialLinks: SocialLink[] = [
-	{
-		href: 'https://instagram.com/esther_crafts',
-		iconClass: 'fas fa-palette',
-		text: 'Esther Crafts',
-		variant: 'pill-insta-crafts',
-	},
-	{
-		href: 'https://instagram.com/esthershopbyec',
-		iconClass: 'fas fa-shopping-cart',
-		text: 'Esther Shop',
-		variant: 'pill-insta-shop',
-	},
-	{
-		href: 'https://instagram.com/floresbyesther',
-		iconClass: 'fas fa-seedling',
-		text: 'Flores by Esther',
-		variant: 'pill-insta-flores',
-	},
-];
+import {
+	siteConfig,
+	primaryLink,
+	instagramLinks,
+	whatsappLink,
+} from '../data/links';
 ---
 
-<Layout title="Esther Crafts - Portal Oficial ✨">
-	<ProfileHeader />
+<Layout title={siteConfig.pageTitle} description={siteConfig.description}>
+	<ProfileHeader
+		brandName={siteConfig.brandName}
+		subtitle={siteConfig.subtitle}
+	/>
 
-	<nav class="w-full flex flex-col gap-[12px]">
-		<LinkPill
-			href="https://esthercrafts.com"
-			iconClass="fas fa-satellite-dish"
-			text="Explorar Sitio Web"
-			variant="pill-web"
-			showArrow={true}
-		/>
+	<nav aria-label="Enlaces oficiales de Esther Crafts" class="w-full flex flex-col gap-[12px]">
+		<LinkPill {...primaryLink} />
 
-		<SocialGroup>
-			{
-				socialLinks.map((link) => (
-					<LinkPill
-						href={link.href}
-						iconClass={link.iconClass}
-						text={link.text}
-						variant={link.variant}
-					/>
-				))
-			}
+		<SocialGroup title={siteConfig.instagramGroupTitle}>
+			{instagramLinks.map((link) => <LinkPill {...link} />)}
 		</SocialGroup>
 
-		<LinkPill
-			href="https://wa.me/18492010608?text=Hola%20Esther%20%E2%9C%A8%20vengo%20desde%20tu%20portal%20QR"
-			iconClass="fab fa-whatsapp"
-			text="Chat Directo WhatsApp"
-			variant="pill-whatsapp"
-		/>
+		<LinkPill {...whatsappLink} />
 	</nav>
 
 	<footer class="mt-[25px] text-[0.65rem] text-text-muted opacity-60 tracking-[2px] uppercase flex items-center gap-[5px]">
-		<span class="font-bold text-neon-pink">&lt;/&gt;</span> by MYTEC
+		<span class="font-bold text-neon-pink">{siteConfig.footerCredit.symbol}</span> {siteConfig.footerCredit.label}
 	</footer>
 </Layout>

@@ -1,5 +1,5 @@
 {
-  "name": "temp-astro",
+  "name": "byesther",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -18,6 +18,7 @@
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.0.8",
     "astro-icon": "^1.1.5",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.2.2"
   }
 }
