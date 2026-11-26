@@ -26,10 +26,10 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
 	brandName: 'Esther Crafts',
-	subtitle: 'Artesanía Digital • Flores • Accesorios',
-	pageTitle: 'Esther Crafts - Portal Oficial ✨',
+	subtitle: 'Artesanía Digital • Accesorios',
+	pageTitle: 'Esther Crafts - Portal Social Oficial',
 	description:
-		'Portal oficial de Esther Crafts: Artesanía Digital, Flores y Accesorios. Accede a nuestro sitio web, redes sociales en Instagram y WhatsApp directo.',
+		'Portal social oficial de Esther Crafts. Accede a nuestro sitio web, redes sociales en Instagram y WhatsApp directo.',
 	instagramGroupTitle: 'Nuestras Marcas en Instagram',
 	footerCredit: {
 		symbol: '</>',
